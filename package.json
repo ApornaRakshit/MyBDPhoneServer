@@ -1,0 +1,32 @@
+{
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test:dgepay": "node tests/test-dgepay-signature.js",
+    "test:moneybag": "node tests/test-moneybag.js",
+    "test:bootstrap": "node tests/test-bootstrap.js",
+    "test:db": "node tests/test-db.js",
+    "migrate": "node src/config/migrate.js",
+    "test:dgepay:all": "node tests/test-dgepay-payload.js && node tests/test-dgepay-signature.js && node tests/test-dgepay-status.js && node tests/test-dgepay-status-nested.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.20.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.3",
+    "express": "^5.2.1",
+    "express-validator": "^7.3.2",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.4.0",
+    "mysql2": "^3.24.4",
+    "nodemailer": "^7.0.13"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
